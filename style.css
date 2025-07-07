@@ -1,0 +1,272 @@
+@import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono:regular);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Share Tech Mono', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-image: radial-gradient(circle at top left, #1c1c1c 0%, #0f0f0f 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header.hero {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.language-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.language-switcher button {
+  background: #ffffff10;
+  color: #fff;
+  border: 1px solid #ffffff30;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background: #ffffff30;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideUp 1s ease-out;
+}
+
+header.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  animation: slideUp 1.5s ease-out;
+}
+
+.btn {
+	width: 300px;
+  background: #00dfc4;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  animation: fadeIn 2s ease;
+	margin: 0 auto;
+}
+
+.btn_questions{
+	display: flex;
+	justify-content: center;
+}
+.btn:hover {
+  background: #00b8a9;
+}
+
+section {
+  padding: 4rem 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section p,
+section ul,
+section li {
+  color: #ccc;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-card,
+.review,
+.member {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.review:hover,
+.member:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00dfc455;
+}
+
+.project-card h3,
+.member h3 {
+  color: #00dfc4;
+  margin-bottom: 0.5rem;
+}
+
+.technologies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.technologies .bx {
+  font-size: 60px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: pulse 2s infinite alternate;
+}
+
+.technologies .bx:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2) drop-shadow(0 0 5px #00dfc4);
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cta-contact {
+	width: 240px;
+  background: #00dfc4;
+  color: #000;
+  display: flex;
+  margin-top: 2rem;
+	margin: 2rem auto 0 ;
+  padding: 0.7rem 1.3rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-contact:hover {
+  background: #00b8a9;
+}
+
+footer {
+  background: radial-gradient(circle at center, #1e1e1e 0%, #0a0a0a 100%);
+  padding: 2rem;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  background-size: 200% 200%;
+  animation: gradientShift 20s ease infinite;
+}
+
+footer .socials a {
+  color: #00dfc4;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2.2rem;
+  }
+  header.hero p {
+    font-size: 1rem;
+  }
+  .language-switcher {
+    position: fixed;
+		z-index: 10;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .project-card,
+  .review,
+  .member {
+    margin-top: 1.5rem;
+  }
+  .technologies {
+    gap: 1.5rem;
+  }
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn,
+  .cta-contact {
+    padding: 0.6rem 0.6rem;
+    font-size: 0.9rem;
+  }
+  .language-switcher button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+		margin: 5px;
+  }
+}
