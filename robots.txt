@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://saidumarprogramist.github.io/IMS_PROGRAMMERS/sitemap.xml
